@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="data:image/png;base64,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">
+    <title>GPT土区做号教程</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1500px;
+            min-width: 0;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .result-box {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+            color: #333;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .result-box:hover {
+            border-color: #667eea;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+        }
+
+        .result-text {
+            flex: 1;
+            word-break: break-all;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .btn-copy {
+            background: #28a745;
+            color: white;
+            padding: 8px 16px;
+            font-size: 0.9em;
+        }
+
+        .btn-copy:hover {
+            background: #218838;
+        }
+
+        .btn-copy.copied {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .option-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .option-group label {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .option-group select,
+        .option-group input {
+            padding: 8px 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .option-group select:focus,
+        .option-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .batch-results {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 15px;
+        }
+
+        .batch-item {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .batch-item:hover {
+            border-color: #667eea;
+            background: #fff;
+        }
+
+        .batch-item-content {
+            flex: 1;
+        }
+
+        .batch-item-name {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.25em;
+        }
+
+        .batch-item-email {
+            color: #667eea;
+            margin-top: 6px;
+            font-size: 1.1em;
+        }
+
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .stats {
+            text-align: center;
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .row {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .col-left {
+            flex: 2 1 280px;
+            min-width: 240px;
+            max-width: 420px;
+        }
+
+        .col-mid {
+            flex: 3 1 300px;
+            min-width: 280px;
+        }
+
+        .col-right {
+            flex: 2 1 260px;
+            min-width: 240px;
+            max-width: 360px;
+        }
+
+        .right-tabs-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+        }
+
+        .right-tabs-list {
+            display: flex;
+            gap: 6px;
+            padding: 14px 18px 0;
+            background: #f8f9fa;
+            border-radius: 15px 15px 0 0;
+            overflow-x: auto;
+        }
+
+        .right-tab {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #999;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .right-tab:hover {
+            color: #667eea;
+            background: rgba(102,126,234,0.08);
+        }
+
+        .right-tab.active {
+            color: #fff;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .right-tab-content {
+            padding: 18px;
+            min-width: 0;
+            background: #fff;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .right-panel {
+            display: none;
+        }
+
+        .right-panel.active {
+            display: block;
+        }
+
+        .right-panel .options {
+            margin-bottom: 12px;
+        }
+
+        .right-panel .btn-group {
+            margin-top: 0;
+        }
+
+        .account-card {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin-bottom: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .account-card:hover {
+            border-color: #667eea;
+        }
+
+        .account-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .account-card-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 16px;
+            font-size: 0.82em;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .account-card-info span {
+            white-space: nowrap;
+        }
+
+        .account-card-info .label {
+            color: #999;
+        }
+
+        .account-card-actions {
+            display: flex;
+            gap: 6px;
+        }
+
+        .account-card-actions button {
+            padding: 3px 12px;
+            font-size: 0.72em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.15s ease;
+        }
+
+        .btn-danger {
+            background: #dc3545 !important;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c82333 !important;
+        }
+
+        .tutorial {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .tutorial-step {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .tutorial-step:hover {
+            border-color: #667eea;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .step-header:hover {
+            background: #fff;
+        }
+
+        .step-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 1em;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-title {
+            flex: 1;
+            font-size: 1em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .step-arrow {
+            font-size: 0.8em;
+            color: #aaa;
+            transition: transform 0.3s ease;
+        }
+
+        .step-arrow.open {
+            transform: rotate(90deg);
+        }
+
+        .step-body {
+            display: none;
+            padding: 0 16px 16px 60px;
+        }
+
+        .step-body.open {
+            display: block;
+        }
+
+        .step-body p {
+            margin: 6px 0;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .step-body a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .step-body a:hover {
+            text-decoration: underline;
+        }
+
+        .step-btn {
+            display: inline-block;
+            padding: 2px 12px;
+            border: none;
+            border-radius: 6px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 0.85em;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            vertical-align: middle;
+        }
+
+        .step-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.4em;
+                gap: 8px !important;
+            }
+            h1 img {
+                width: 28px !important;
+                height: 28px !important;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+            .col-left,
+            .col-mid,
+            .col-right {
+                flex: 1 1 100%;
+                max-width: none;
+                min-width: 0;
+            }
+            .right-tabs-list {
+                overflow-x: auto;
+            }
+            .right-tab {
+                font-size: 0.8em;
+                padding: 8px 10px;
+            }
+            .right-tabs-list {
+                padding: 10px 12px 0;
+            }
+            .right-tab-content {
+                padding: 14px;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .options {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="display:flex;align-items:center;justify-content:center;gap:12px;"><img src="data:image/png;base64,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" style="width:36px;height:36px;">GPT土区做号教程</h1>
+        
+        <div class="row">
+            <div class="col-left">
+                <div class="card" style="padding:0;">
+                    <div style="padding:14px 16px;background:linear-gradient(135deg, #667eea08, #764ba208);border-radius:15px 15px 0 0;border-bottom:2px solid #e9ecef;">
+                        <span style="font-weight:700;color:#333;font-size:1em;">📖 使用教程</span>
+                    </div>
+                    <div style="padding:16px 18px;">
+                        <div class="tutorial">
+                            <div class="tutorial-step">
+                                <div class="step-header" onclick="toggleStep(this)">
+                                    <div class="step-num">1</div>
+                                    <div class="step-title">苹果官网注册账号</div>
+                                    <span class="step-arrow">▶</span>
+                                </div>
+                                <div class="step-body">
+                                    <div style="line-height:2;color:#444;font-size:0.95em;">
+                                        <p style="margin:6px 0;">1. 打开 <a href="https://account.apple.com/account?appId=4725&returnUrl=https%3A%2F%2Fmysupport.apple.com%2F" target="_blank">Apple ID 注册页面</a>，先点中间栏 <button class="step-btn" onclick="switchRightTab(0);generateName()" style="font-size:0.8em;">生成姓名</button> 填上，地区选<strong>土耳其</strong>，出生年月填成年的。</p>
+                                        <p style="margin:6px 0;">2. 点 <button class="step-btn" onclick="switchRightTab(1);generateEmail()" style="font-size:0.8em;">生成邮箱</button> 得到一个邮箱填上去，再点 <button class="step-btn" onclick="switchRightTab(3);generatePassword();tryAutoSave()" style="font-size:0.8em;">生成密码</button> 设置密码。</p>
+                                        <p style="margin:6px 0;">3. 电话填能收短信的号码（国内手机号也可以），没有的话去 <a href="https://5sim.net/zh" target="_blank">5sim.net</a> 等接码平台收验证。</p>
+                                        <p style="margin:6px 0;">4. <strong>取消勾选</strong>通知和App音乐电视节目等选项，提交后去邮箱收验证码填上，再收手机验证码填上就注册完成了。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tutorial-step">
+                                <div class="step-header" onclick="toggleStep(this)">
+                                    <div class="step-num">2</div>
+                                    <div class="step-title">下载 ChatGPT + 环境设置</div>
+                                    <span class="step-arrow">▶</span>
+                                </div>
+                                <div class="step-body">
+                                    <div style="line-height:2;color:#444;font-size:0.95em;">
+                                        <p style="margin:6px 0;">1. 苹果手机<strong>挂代理</strong>，去 App Store 登录刚注册的账号。首次登录会弹出土耳其区条款，点 <strong>Agree</strong>。</p>
+                                        <p style="margin:6px 0;">2. 搜索下载 ChatGPT。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tutorial-step">
+                                <div class="step-header" onclick="toggleStep(this)">
+                                    <div class="step-num">3</div>
+                                    <div class="step-title">充值礼品卡</div>
+                                    <span class="step-arrow">▶</span>
+                                </div>
+                                <div class="step-body">
+                                    <div style="line-height:2;color:#444;font-size:0.95em;">
+                                        <p style="margin:6px 0;">1. 去 <a href="https://www.goofish.com" target="_blank">闲鱼</a> 买<strong>土耳其区</strong>礼品卡（建议买 <strong>500 里拉</strong>），或者去 <a href="https://www.seagm.com/zh-cn/itunes-gift-card-turkey?ps=Card-Home-Recent-Purchased" target="_blank">SEAGM</a> 等网站充值（必须买土耳其区，其他区用不了）。</p>
+                                        <p style="margin:6px 0;">2. 拿到兑换码后，打开手机 App Store → 点右上角头像 → 选 <strong>Redeem Gift Card or Code</strong> → 手动输入兑换码，确认后金额就到 Apple ID 余额了。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tutorial-step">
+                                <div class="step-header" onclick="toggleStep(this)">
+                                    <div class="step-num">4</div>
+                                    <div class="step-title">升级 ChatGPT Plus</div>
+                                    <span class="step-arrow">▶</span>
+                                </div>
+                                <div class="step-body">
+                                    <div style="line-height:2;color:#444;font-size:0.95em;">
+                                        <p style="margin:6px 0;">打开 ChatGPT 用苹果账号登录，点 <strong>Upgrade to Plus</strong>，付款时弹出账单信息，点中间栏 <button class="step-btn" onclick="switchRightTab(2)" style="font-size:0.8em;">查看账单</button> 复制过去：Street 填 <strong>Ataturk Cd</strong>，Postcode 填 <strong>34000</strong>，City 填 <strong>Istanbul</strong>，Phone 填苹果注册的手机号。用 Apple ID 余额支付，土耳其区约 <strong>₺499.99 TRY</strong>/月（比美区便宜很多）。完成。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tutorial-step">
+                                <div class="step-header" onclick="toggleStep(this)">
+                                    <div class="step-num">5</div>
+                                    <div class="step-title">分享账号</div>
+                                    <span class="step-arrow">▶</span>
+                                </div>
+                                <div class="step-body">
+                                    <div style="line-height:2;color:#444;font-size:0.95em;">
+                                        <p style="margin:6px 0;">可以把账号给朋友使用了，ChatGPT 支持多设备登录。去右侧 <button class="step-btn" onclick="switchRightTab(0)" style="font-size:0.8em;">账号存档</button> 保存好，方便查看有效期。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top:12px;padding:14px 16px;background:#fff3e0;border:1px solid #ffcc02;border-radius:10px;">
+                            <div style="font-weight:700;color:#e65100;font-size:0.95em;margin-bottom:8px;">⚠️ 做号注意事项</div>
+                            <div style="font-size:0.88em;color:#444;line-height:1.8;">
+                                <p style="margin:4px 0;">• <strong>充值用的手机绝对不能插国内 SIM 卡</strong>，基站信息无法通过代理修改，插卡必被检测</p>
+                                <p style="margin:4px 0;">• <strong>环境设置</strong>：语言与地区改成 <strong>土耳其/土耳其语</strong>；时区关自动选 <strong>伊斯坦布尔</strong>；定位服务 <strong>关闭</strong></p>
+                                <p style="margin:4px 0;">• <strong>IP 注意事项</strong>：注册和充值时<strong>不需要土耳其 IP</strong>，任何非中国 IP 都行。关键是 <strong>一个账号一个 IP</strong>，过程中别切节点，IP 要干净（别用公共机场），否则触发风控</p>
+                                <p style="margin:4px 0;">• 同 IP 频繁注册会被 Apple 风控拦截，<strong>不显示图片验证码</strong>。如果遇到这种情况，<strong>立即停手</strong>，换 IP 或等 24 小时再试，不要硬刷</p>
+                                <p style="margin:4px 0;">• 一台 iPhone <strong>极其不建议同时服务超过 3 个不同的 Apple ID</strong> 进行充值，超过这个数设备被封概率飙升</p>
+                                <p style="margin:4px 0;">• 每次切换 ID 充值后，建议至少间隔 <strong>24-48 小时</strong> 再换下一个</p>
+                                <p style="margin:4px 0;">• 切换 ID 时，严格遵守以下流程（一台机器非要切 2-3 个号）：</p>
+                                <div style="margin:4px 0 8px 20px;padding:8px 12px;background:#fff8e1;border-radius:6px;font-size:0.95em;">
+                                    <p style="margin:3px 0;">① <strong>退出</strong> — 退出当前 Apple ID</p>
+                                    <p style="margin:3px 0;">② <strong>清理</strong> — 卸载 ChatGPT 等相关 App</p>
+                                    <p style="margin:3px 0;">③ <strong>重置</strong> — 修改代理节点（IP 必须变）</p>
+                                    <p style="margin:3px 0;">④ <strong>重启</strong> — 物理重启手机，重置内存中的临时 ID 标记</p>
+                                    <p style="margin:3px 0;">⑤ <strong>登录</strong> — 换号登录，重新下载 App</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-mid">
+                <div class="card" style="padding:0;">
+                    <div class="right-tabs-container">
+                        <div class="right-tabs-list">
+                            <button class="right-tab active" onclick="switchRightTab(0)">👤 英文姓名</button>
+                            <button class="right-tab" onclick="switchRightTab(1)">📧 邮箱生成</button>
+                            <button class="right-tab" onclick="switchRightTab(2)">🇹🇷 土耳其账单</button>
+                            <button class="right-tab" onclick="switchRightTab(3)">🔑 密码生成</button>
+                            <button class="right-tab" onclick="switchRightTab(4)">📋 批量结果</button>
+                        </div>
+                        <div class="right-tab-content">
+                            <!-- 英文姓名面板 -->
+                            <div class="right-panel active" id="rightPanel0">
+                                <input type="hidden" id="genderSelect" value="random">
+                                <input type="hidden" id="nameFormat" value="firstlast">
+                                <input type="hidden" id="nameCount" value="1">
+                                <div class="result-box" style="flex-direction:column;align-items:stretch;padding:20px;margin-bottom:12px;">
+                                    <div style="font-size:0.75em;color:#aaa;margin-bottom:6px;">生成结果</div>
+                                    <span class="result-text" id="nameResult" style="white-space:pre-wrap;line-height:1.8;font-size:1.05em;">点击「生成姓名」</span>
+                                </div>
+                                <button class="btn btn-primary" style="width:100%;padding:10px;font-size:0.9em;" onclick="generateName()">生成姓名</button>
+                                <div style="display:flex;gap:6px;margin-top:6px;">
+                                    <button class="btn btn-copy" style="padding:6px 14px;font-size:0.8em;" onclick="copyFirstName(this)">复制名</button>
+                                    <button class="btn btn-copy" style="padding:6px 14px;font-size:0.8em;" onclick="copyLastName(this)">复制姓</button>
+                                    <button class="btn btn-copy" style="padding:6px 14px;font-size:0.8em;" onclick="copyToClipboard('nameResult', this)">复制全部</button>
+                                </div>
+                            </div>
+
+                            <!-- 邮箱生成面板 -->
+                            <div class="right-panel" id="rightPanel1">
+                                <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+                                    <select id="emailDomain" style="flex:2;min-width:120px;padding:8px 10px;border:2px solid #e9ecef;border-radius:8px;font-size:0.85em;outline:none;">
+                                        <option value="163.com" selected>163邮箱</option>
+                                        <option value="qq.com">QQ邮箱</option>
+                                        <option value="126.com">126邮箱</option>
+                                        <option value="sina.com">新浪邮箱</option>
+                                        <option value="sohu.com">搜狐邮箱</option>
+                                        <option value="foxmail.com">Foxmail</option>
+                                        <option value="aliyun.com">阿里邮箱</option>
+                                        <option value="yeah.net">Yeah</option>
+                                        <option value="gmail.com">gmail.com (需VPN)</option>
+                                        <option value="outlook.com">outlook.com</option>
+                                        <option value="yahoo.com">yahoo.com</option>
+                                        <option value="hotmail.com">hotmail.com</option>
+                                        <option value="icloud.com">icloud.com</option>
+                                        <option value="proton.me">proton.me (需VPN)</option>
+                                        <option value="random">随机</option>
+                                    </select>
+                                    <select id="emailFormat" style="flex:1;min-width:80px;padding:8px 10px;border:2px solid #e9ecef;border-radius:8px;font-size:0.85em;outline:none;">
+                                        <option value="fullname">全名</option>
+                                        <option value="dot">名.姓</option>
+                                        <option value="underscore">名_姓</option>
+                                        <option value="random">随机</option>
+                                    </select>
+                                    <label style="display:flex;align-items:center;gap:4px;font-size:0.85em;color:#555;cursor:pointer;white-space:nowrap;">
+                                        <input type="checkbox" id="useNameForEmail" checked> 基于姓名
+                                    </label>
+                                    <input type="hidden" id="emailCount" value="1">
+                                </div>
+                                <div class="result-box" style="flex-direction:column;align-items:stretch;padding:20px;margin-bottom:12px;">
+                                    <div style="font-size:0.75em;color:#aaa;margin-bottom:6px;">生成结果</div>
+                                    <span class="result-text" id="emailResult" style="white-space:pre-wrap;line-height:1.8;font-size:1em;word-break:break-all;">点击「生成邮箱」</span>
+                                </div>
+                                <button class="btn btn-primary" style="width:100%;padding:10px;font-size:0.9em;" onclick="generateEmail()">生成邮箱</button>
+                                <div style="display:flex;gap:6px;margin-top:6px;">
+                                    <button class="btn btn-copy" style="padding:6px 14px;font-size:0.8em;" onclick="copyEmailPrefix(this)">复制前缀</button>
+                                    <button class="btn btn-copy" style="padding:6px 14px;font-size:0.8em;" onclick="copyToClipboard('emailResult', this)">复制邮箱</button>
+                                </div>
+                                <div id="emailPwdRow" style="display:none;margin-top:8px;padding:10px 14px;background:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;align-items:center;gap:8px;flex-wrap:wrap;">
+                                    <span style="font-weight:600;color:#555;font-size:0.85em;">📧 邮箱密码</span>
+                                    <span id="emailPwdText" style="font-family:monospace;font-size:0.9em;color:#333;word-break:break-all;">-</span>
+                                    <button class="btn btn-copy" style="padding:3px 10px;font-size:0.75em;margin-left:auto;" onclick="copyEmailPwd(this)">复制</button>
+                                </div>
+                                <div id="emailLoginRow" style="display:none;margin-top:10px;padding:10px 14px;background:#f0f0ff;border-radius:8px;align-items:center;gap:10px;flex-wrap:wrap;">
+                                    <span style="font-weight:600;color:#667eea;font-size:0.85em;">登录:</span>
+                                    <a id="emailLoginLink" href="#" target="_blank" style="color:#667eea;font-size:0.85em;word-break:break-all;"></a>
+                                    <button class="btn btn-copy" style="padding:4px 12px;font-size:0.8em;" onclick="copyEmailLoginUrl(this)">复制链接</button>
+                                </div>
+                                <div id="emailTipRow" style="display:none;margin-top:6px;padding:8px 12px;background:#fff8e1;border-radius:8px;font-size:0.78em;color:#856404;line-height:1.5;"></div>
+                            </div>
+
+                            <!-- 土耳其账单面板 -->
+                            <div class="right-panel" id="rightPanel2">
+                                <div style="display:flex;flex-direction:column;gap:8px;">
+                                    <div style="font-size:0.75em;color:#aaa;text-align:center;margin-bottom:4px;">自动生成，下方按钮复制对应字段</div>
+                                    <div style="background:#f8f9fa;border-radius:10px;padding:14px 16px;">
+                                        <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #eee;">
+                                            <span><strong style="color:#667eea;">Street</strong> <span style="color:#333;">Ataturk Cd</span></span>
+                                            <button class="btn btn-copy" style="padding:3px 10px;font-size:0.75em;" onclick="copyTurkishField('street', this)">复制</button>
+                                        </div>
+                                        <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #eee;">
+                                            <span><strong style="color:#667eea;">Postcode</strong> <span style="color:#333;">34000</span></span>
+                                            <button class="btn btn-copy" style="padding:3px 10px;font-size:0.75em;" onclick="copyTurkishField('postcode', this)">复制</button>
+                                        </div>
+                                        <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #eee;">
+                                            <span><strong style="color:#667eea;">City</strong> <span style="color:#333;">Istanbul</span></span>
+                                            <button class="btn btn-copy" style="padding:3px 10px;font-size:0.75em;" onclick="copyTurkishField('city', this)">复制</button>
+                                        </div>
+                                        <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #eee;">
+                                            <span><strong style="color:#667eea;">Country</strong> <span style="color:#333;">Turkey</span></span>
+                                            <button class="btn btn-copy" style="padding:3px 10px;font-size:0.75em;" onclick="copyTurkishField('country', this)">复制</button>
+                                        </div>
+                                        <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;">
+                                            <span style="color:#667eea;font-size:0.85em;" id="trFull">全部信息</span>
+                                            <button class="btn btn-copy" style="padding:3px 10px;font-size:0.75em;" onclick="copyTurkishFull(this)">复制全部</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 密码生成面板 -->
+                            <div class="right-panel" id="rightPanel3">
+                                <input type="hidden" id="pwdLength" value="16">
+                                <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px;">
+                                    <div style="display:flex;align-items:center;gap:4px;">
+                                        <label style="font-size:0.85em;color:#555;font-weight:600;">数量</label>
+                                        <input type="number" id="pwdCount" value="1" min="1" max="50" style="width:55px;padding:6px 8px;border:2px solid #e9ecef;border-radius:8px;font-size:0.85em;outline:none;">
+                                    </div>
+                                    <div style="display:flex;gap:6px;">
+                                        <label style="display:flex;align-items:center;gap:3px;cursor:pointer;font-size:0.8em;color:#555;padding:4px 8px;border:1px solid #e9ecef;border-radius:6px;background:#f8f9fa;"><input type="checkbox" id="pwdUpper" checked> A-Z</label>
+                                        <label style="display:flex;align-items:center;gap:3px;cursor:pointer;font-size:0.8em;color:#555;padding:4px 8px;border:1px solid #e9ecef;border-radius:6px;background:#f8f9fa;"><input type="checkbox" id="pwdLower" checked> a-z</label>
+                                        <label style="display:flex;align-items:center;gap:3px;cursor:pointer;font-size:0.8em;color:#555;padding:4px 8px;border:1px solid #e9ecef;border-radius:6px;background:#f8f9fa;"><input type="checkbox" id="pwdNumber" checked> 0-9</label>
+                                        <label style="display:flex;align-items:center;gap:3px;cursor:pointer;font-size:0.8em;color:#555;padding:4px 8px;border:1px solid #e9ecef;border-radius:6px;background:#f8f9fa;"><input type="checkbox" id="pwdSymbol" checked> !@#</label>
+                                    </div>
+                                </div>
+                                <div class="result-box" style="flex-direction:column;align-items:stretch;padding:20px;margin-bottom:12px;">
+                                    <div style="font-size:0.75em;color:#aaa;margin-bottom:6px;">生成结果</div>
+                                    <span class="result-text" id="pwdResult" style="white-space:pre-wrap;line-height:1.8;font-size:1em;font-family:monospace;word-break:break-all;">点击「生成密码」</span>
+                                </div>
+                                <button class="btn btn-primary" style="width:100%;padding:10px;font-size:0.9em;" onclick="generatePassword()">生成密码</button>
+                                <div style="display:flex;gap:6px;align-items:center;margin-top:6px;">
+                                    <button class="btn btn-copy" style="padding:6px 14px;font-size:0.8em;" onclick="copyToClipboard('pwdResult', this)">复制密码</button>
+                                    <span id="pwdStrength" style="font-size:0.75em;color:#888;"></span>
+                                </div>
+                            </div>
+
+                            <!-- 批量结果面板 -->
+                            <div class="right-panel" id="rightPanel4">
+                                <div style="background:linear-gradient(135deg,#667eea08,#764ba208);border-radius:10px;padding:14px 16px;margin-bottom:14px;">
+                                    <div style="font-weight:700;color:#333;font-size:0.95em;margin-bottom:10px;">⚡ 一键生成</div>
+                                    <div id="quickGenResult" style="background:#fff;border:1px solid #e9ecef;border-radius:8px;padding:12px 14px;font-size:0.85em;line-height:1.8;color:#444;min-height:60px;margin-bottom:10px;word-break:break-all;">点击下方按钮生成</div>
+                                    <div style="display:flex;gap:8px;">
+                                        <button class="btn btn-primary" style="flex:1;padding:8px;font-size:0.85em;" onclick="quickGenerate()">🔄 一键生成</button>
+                                        <button class="btn btn-copy" style="flex:1;padding:8px;font-size:0.85em;" onclick="quickCopy()">📋 复制全部</button>
+                                        <button class="btn btn-copy" style="flex:1;padding:8px;font-size:0.85em;background:#ffc107;color:#333;" onclick="quickSave()">💾 保存账号</button>
+                                    </div>
+                                </div>
+                                <div style="border-top:1px solid #e9ecef;padding-top:12px;">
+                                    <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;">
+                                        <div style="display:flex;align-items:center;gap:4px;">
+                                            <label style="font-size:0.85em;color:#555;font-weight:600;">数量</label>
+                                            <input type="number" id="batchCount" value="10" min="1" max="100" style="width:60px;padding:6px 8px;border:2px solid #e9ecef;border-radius:8px;font-size:0.85em;outline:none;">
+                                        </div>
+                                        <button class="btn btn-primary" style="padding:7px 16px;font-size:0.85em;" onclick="generateBatch()">批量生成</button>
+                                        <button class="btn btn-secondary" style="padding:7px 16px;font-size:0.85em;" onclick="copyAllResults()">复制全部</button>
+                                        <button class="btn btn-secondary" style="padding:7px 16px;font-size:0.85em;" onclick="clearBatch()">清空</button>
+                                    </div>
+                                    <div class="batch-results" id="batchResults"></div>
+                                    <div class="stats" id="batchStats"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-right">
+                <div class="card" style="padding:0;">
+                    <div style="padding:14px 18px;border-bottom:2px solid #e9ecef;display:flex;justify-content:space-between;align-items:center;">
+                        <span style="font-weight:700;color:#333;font-size:1em;">💾 账号存档</span>
+                        <button class="btn btn-copy" style="padding:5px 14px;font-size:0.78em;border-radius:6px;" onclick="exportAccounts()">导出</button>
+                    </div>
+                    <div style="padding:16px 18px;">
+                        <div style="background:#f8f9fa;border-radius:12px;padding:14px 16px;margin-bottom:16px;">
+                            <div style="display:flex;flex-direction:column;gap:8px;">
+                                <input id="saveEmail" style="padding:8px 12px;border:2px solid #e9ecef;border-radius:8px;font-size:0.85em;outline:none;width:100%;box-sizing:border-box;" placeholder="📧 邮箱">
+                                <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                                    <input id="saveApplePwd" type="text" style="flex:1;min-width:100px;padding:8px 12px;border:2px solid #e9ecef;border-radius:8px;font-size:0.85em;outline:none;box-sizing:border-box;" placeholder="🔑 苹果密码">
+                                    <input id="saveEmailPwd" type="text" style="flex:1;min-width:100px;padding:8px 12px;border:2px solid #e9ecef;border-radius:8px;font-size:0.85em;outline:none;box-sizing:border-box;" placeholder="📧 邮箱密码">
+                                </div>
+                                <input id="savePhone" style="padding:8px 12px;border:2px solid #e9ecef;border-radius:8px;font-size:0.85em;outline:none;width:100%;box-sizing:border-box;" placeholder="📱 手机号">
+                            </div>
+                            <div style="display:flex;gap:8px;margin-top:10px;">
+                                <button class="btn btn-primary" style="flex:1;padding:9px;font-size:0.85em;border-radius:8px;" onclick="saveAccount()" id="saveBtn">保存</button>
+                                <button class="btn btn-secondary" style="flex:1;padding:9px;font-size:0.85em;border-radius:8px;" onclick="clearSaveInputs()">清空</button>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                                <span style="font-weight:600;color:#555;font-size:0.9em;">📋 已保存 (<span id="accountCount">0</span>)</span>
+                                <button class="btn btn-copy btn-danger" style="padding:4px 12px;font-size:0.72em;display:none;border-radius:6px;" onclick="clearAllAccounts()" id="clearAllBtn">清空全部</button>
+                            </div>
+                            <div id="accountList" style="max-height:500px;overflow-y:auto;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">复制成功！</div>
+
+    <script>
+        const firstNamesMale = [
+            'James', 'John', 'Robert', 'Michael', 'William', 'David', 'Richard', 'Joseph',
+            'Thomas', 'Charles', 'Christopher', 'Daniel', 'Matthew', 'Anthony', 'Mark',
+            'Donald', 'Steven', 'Paul', 'Andrew', 'Joshua', 'Kenneth', 'Kevin', 'Brian',
+            'George', 'Timothy', 'Ronald', 'Edward', 'Jason', 'Jeffrey', 'Ryan',
+            'Jacob', 'Gary', 'Nicholas', 'Eric', 'Jonathan', 'Stephen', 'Larry', 'Justin',
+            'Scott', 'Brandon', 'Benjamin', 'Samuel', 'Raymond', 'Gregory', 'Frank',
+            'Alexander', 'Patrick', 'Jack', 'Dennis', 'Jerry', 'Tyler', 'Aaron', 'Jose',
+            'Adam', 'Nathan', 'Henry', 'Douglas', 'Zachary', 'Peter', 'Kyle'
+        ];
+
+        const firstNamesFemale = [
+            'Mary', 'Patricia', 'Jennifer', 'Linda', 'Barbara', 'Elizabeth', 'Susan',
+            'Jessica', 'Sarah', 'Karen', 'Lisa', 'Nancy', 'Betty', 'Margaret', 'Sandra',
+            'Ashley', 'Kimberly', 'Emily', 'Donna', 'Michelle', 'Dorothy', 'Carol',
+            'Amanda', 'Melissa', 'Deborah', 'Stephanie', 'Rebecca', 'Sharon', 'Laura',
+            'Cynthia', 'Kathleen', 'Amy', 'Angela', 'Shirley', 'Anna', 'Brenda', 'Pamela',
+            'Emma', 'Nicole', 'Helen', 'Samantha', 'Katherine', 'Christine', 'Debra',
+            'Rachel', 'Carolyn', 'Janet', 'Catherine', 'Maria', 'Heather', 'Diane',
+            'Ruth', 'Julie', 'Olivia', 'Joyce', 'Virginia', 'Victoria', 'Kelly', 'Lauren'
+        ];
+
+        const lastNames = [
+            'Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis',
+            'Rodriguez', 'Martinez', 'Hernandez', 'Lopez', 'Gonzalez', 'Wilson', 'Anderson',
+            'Thomas', 'Taylor', 'Moore', 'Jackson', 'Martin', 'Lee', 'Perez', 'Thompson',
+            'White', 'Harris', 'Sanchez', 'Clark', 'Ramirez', 'Lewis', 'Robinson',
+            'Walker', 'Young', 'Allen', 'King', 'Wright', 'Scott', 'Torres', 'Nguyen',
+            'Hill', 'Flores', 'Green', 'Adams', 'Nelson', 'Baker', 'Hall', 'Rivera',
+            'Campbell', 'Mitchell', 'Carter', 'Roberts', 'Turner', 'Phillips', 'Evans',
+            'Parker', 'Edwards', 'Collins', 'Stewart', 'Morris', 'Murphy', 'Cook'
+        ];
+
+        const middleNames = [
+            'Ann', 'Marie', 'Lee', 'Rose', 'Grace', 'Jane', 'Lynn', 'Mae',
+            'James', 'William', 'Edward', 'Michael', 'David', 'John', 'Robert'
+        ];
+
+        const emailDomains = [
+            'gmail.com', 'outlook.com', 'yahoo.com', 'hotmail.com', 'icloud.com', 'proton.me',
+            'qq.com', '163.com', '126.com', 'sina.com', 'sohu.com', 'foxmail.com', 'aliyun.com', 'yeah.net'
+        ];
+
+        const emailTips = {
+            '163.com': '一个手机号最多注册 5 个免费邮箱（与 126/yeah 共用名额）',
+            '126.com': '一个手机号可注册多个（与 163/yeah 同属网易体系）',
+            'yeah.net': '网易体系，一个手机号最多注册 5 个（与 163/126 共用）',
+            'qq.com': '一个手机号可直接注册 1 个 QQ 邮箱，绑定 QQ 号最多 5 个独立邮箱；支持微信扫码登录',
+            'foxmail.com': '同一手机号 30 天内仅允许注册 1 个',
+            'sina.com': '一个手机号只能注册 1 个（手机号即邮箱名的一部分）',
+            'aliyun.com': '一个手机号最多绑定 10 个邮箱账号',
+            'sohu.com': '一个手机号可注册 1 个',
+            'gmail.com': '需 VPN，一个手机号可注册 2~3 个',
+            'outlook.com': '一个手机号可注册 1 个，注册相对宽松',
+            'hotmail.com': '同 Outlook，一个手机号可注册 1 个',
+            'yahoo.com': '一个手机号可注册 1 个，国内访问不稳定',
+            'icloud.com': '需苹果设备，一个 Apple ID 对应 1 个',
+            'proton.me': '无需手机号即可注册，需 VPN'
+        };
+
+        const emailLoginUrls = {
+            '163.com': 'https://mail.163.com',
+            'qq.com': 'https://mail.qq.com',
+            '126.com': 'https://mail.126.com',
+            'sina.com': 'https://mail.sina.com.cn',
+            'sohu.com': 'https://mail.sohu.com',
+            'foxmail.com': 'https://mail.qq.com',
+            'aliyun.com': 'https://mail.aliyun.com',
+            'yeah.net': 'https://www.yeah.net',
+            'gmail.com': 'https://mail.google.com',
+            'outlook.com': 'https://outlook.live.com',
+            'yahoo.com': 'https://mail.yahoo.com',
+            'hotmail.com': 'https://outlook.live.com',
+            'icloud.com': 'https://www.icloud.com',
+            'proton.me': 'https://mail.proton.me'
+        };
+        let lastGeneratedName = null;
+        let lastGeneratedEmail = '';
+        let lastGeneratedPwd = '';
+        let lastEmailPwd = '';
+        let batchResults = [];
+
+        function generateEmailPwd() {
+            var words = ['Love','Pass','Sunny','Happy','Star','Life','King','Book','Cool','Dark','Fish','Gold','Hero','Lake','Moon','Note','Open','Park','Rain','Safe','Tree','View','Wave','Zone'];
+            var w = words[Math.floor(Math.random() * words.length)];
+            var num = String(Math.floor(Math.random() * 9000) + 1000);
+            return w + num;
+        }
+
+        function copyEmailPwd(btn) {
+            var text = document.getElementById('emailPwdText').textContent;
+            if (text && text !== '-') copyText(text, btn);
+        }
+
+        function tryAutoSave() {
+            const email = lastGeneratedEmail;
+            const pwd = lastGeneratedPwd;
+            if (!email || !pwd) return;
+            showSavePrompt(email, pwd, lastEmailPwd);
+        }
+
+        function showSavePrompt(email, pwd, emailPwd) {
+            const existing = document.getElementById('savePrompt');
+            if (existing) existing.remove();
+            const div = document.createElement('div');
+            div.id = 'savePrompt';
+            div.style.cssText = 'position:fixed;bottom:30px;right:30px;background:white;border:2px solid #667eea;border-radius:12px;padding:18px 22px;box-shadow:0 8px 30px rgba(0,0,0,0.15);z-index:9999;max-width:360px;animation:fadeIn 0.3s ease;';
+            div.innerHTML = '<div style="font-weight:700;color:#333;margin-bottom:8px;">💾 是否保存账号？</div>' +
+                '<div style="font-size:0.88em;color:#666;margin-bottom:14px;line-height:1.6;">检测到已生成邮箱和密码，是否自动填入右侧账号存档？</div>' +
+                '<div style="display:flex;gap:8px;justify-content:flex-end;">' +
+                '<button id="savePromptNo" style="padding:7px 18px;border:1px solid #ddd;border-radius:8px;background:#fff;color:#666;cursor:pointer;font-size:0.85em;">取消</button>' +
+                '<button id="savePromptYes" style="padding:7px 18px;border:none;border-radius:8px;background:linear-gradient(135deg,#667eea,#764ba2);color:white;cursor:pointer;font-size:0.85em;font-weight:600;">确认保存</button>' +
+                '</div>';
+            document.body.appendChild(div);
+            document.getElementById('savePromptYes').onclick = function() {
+                document.getElementById('saveEmail').value = email;
+                document.getElementById('saveApplePwd').value = pwd;
+                if (emailPwd) document.getElementById('saveEmailPwd').value = emailPwd;
+                div.remove();
+                showToast('已填入右侧存档，点击「保存」完成');
+            };
+            document.getElementById('savePromptNo').onclick = function() { div.remove(); };
+            setTimeout(function() { if (div.parentNode) div.remove(); }, 10000);
+        }
+
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function randomChoice(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        function generateOneName(gender, format) {
+            let isMale;
+            if (gender === 'male') isMale = true;
+            else if (gender === 'female') isMale = false;
+            else isMale = Math.random() > 0.5;
+
+            const firstName = randomChoice(isMale ? firstNamesMale : firstNamesFemale);
+            const lastName = randomChoice(lastNames);
+            const middleName = randomChoice(middleNames);
+            let fullName;
+
+            switch (format) {
+                case 'firstlast': fullName = `${firstName} ${lastName}`; break;
+                case 'lastfirst': fullName = `${lastName} ${firstName}`; break;
+                case 'full': fullName = `${firstName} ${middleName} ${lastName}`; break;
+            }
+
+            return { firstName, lastName, middleName, fullName };
+        }
+
+        function generateName() {
+            const gender = document.getElementById('genderSelect').value;
+            const format = document.getElementById('nameFormat').value;
+            const count = parseInt(document.getElementById('nameCount').value) || 1;
+
+            const used = new Set();
+            const names = [];
+
+            for (let i = 0; i < count; i++) {
+                let nameObj;
+                let attempts = 0;
+                do {
+                    nameObj = generateOneName(gender, format);
+                    attempts++;
+                } while (used.has(nameObj.fullName) && attempts < 100);
+
+                used.add(nameObj.fullName);
+                names.push(nameObj);
+            }
+
+            lastGeneratedName = names[0];
+            document.getElementById('nameResult').textContent = names.map(n => n.fullName).join('\n');
+
+            return names;
+        }
+
+        function generateOneEmail(firstName, lastName, domain, format) {
+            const actualFormat = format === 'random' ? ['fullname', 'dot', 'underscore'][random(0, 2)] : format;
+            const num = random(1, 9999);
+            let emailLocal;
+
+            switch (actualFormat) {
+                case 'fullname':
+                    emailLocal = `${firstName.toLowerCase()}${lastName.toLowerCase()}${num}`;
+                    break;
+                case 'dot':
+                    emailLocal = `${firstName.toLowerCase()}.${lastName.toLowerCase()}${num}`;
+                    break;
+                case 'underscore':
+                    emailLocal = `${firstName.toLowerCase()}_${lastName.toLowerCase()}${num}`;
+                    break;
+            }
+
+            const actualDomain = domain === 'random' ? randomChoice(emailDomains) : domain;
+            return `${emailLocal}@${actualDomain}`;
+        }
+
+        function generateEmail() {
+            const useName = document.getElementById('useNameForEmail').checked;
+            const domain = document.getElementById('emailDomain').value;
+            const format = document.getElementById('emailFormat').value;
+            const count = parseInt(document.getElementById('emailCount').value) || 1;
+
+            const used = new Set();
+            const emails = [];
+
+            for (let i = 0; i < count; i++) {
+                let firstName, lastName;
+
+                if (useName && lastGeneratedName && count === 1) {
+                    firstName = lastGeneratedName.firstName;
+                    lastName = lastGeneratedName.lastName;
+                } else {
+                    firstName = randomChoice(firstNamesMale.concat(firstNamesFemale));
+                    lastName = randomChoice(lastNames);
+                }
+
+                let email;
+                let attempts = 0;
+                do {
+                    email = generateOneEmail(firstName, lastName, domain, format);
+                    attempts++;
+                } while (used.has(email) && attempts < 100);
+
+                used.add(email);
+                emails.push(email);
+            }
+
+            document.getElementById('emailResult').textContent = emails.join('\n');
+            if (emails.length > 0) lastGeneratedEmail = emails[0];
+            const pwd = generateEmailPwd();
+            document.getElementById('emailPwdText').textContent = pwd;
+            document.getElementById('emailPwdRow').style.display = 'flex';
+            lastEmailPwd = pwd;
+
+            const loginRow = document.getElementById('emailLoginRow');
+            const loginLink = document.getElementById('emailLoginLink');
+            const tipRow = document.getElementById('emailTipRow');
+            if (emails.length > 0) {
+                const domain = emails[0].split('@')[1];
+                const url = emailLoginUrls[domain] || '';
+                if (url) {
+                    loginLink.textContent = url;
+                    loginLink.href = url;
+                    loginRow.style.display = 'flex';
+                } else {
+                    loginRow.style.display = 'none';
+                }
+                const tip = emailTips[domain];
+                if (tip) {
+                    tipRow.textContent = '💡 ' + tip;
+                    tipRow.style.display = 'block';
+                } else {
+                    tipRow.style.display = 'none';
+                }
+            } else {
+                loginRow.style.display = 'none';
+                tipRow.style.display = 'none';
+            }
+
+            return emails;
+        }
+
+        function generateBatch() {
+            const count = parseInt(document.getElementById('batchCount').value) || 10;
+            const container = document.getElementById('batchResults');
+            const gender = document.getElementById('genderSelect').value;
+            const format = document.getElementById('nameFormat').value;
+            const domain = document.getElementById('emailDomain').value;
+            const emailFormat = document.getElementById('emailFormat').value;
+
+            batchResults = [];
+            container.innerHTML = '';
+
+            const usedNames = new Set();
+            const usedEmails = new Set();
+
+            for (let i = 0; i < count; i++) {
+                let nameObj, email;
+                let attempts = 0;
+                do {
+                    nameObj = generateOneName(gender, format);
+                    attempts++;
+                } while (usedNames.has(nameObj.fullName) && attempts < 100);
+                usedNames.add(nameObj.fullName);
+
+                attempts = 0;
+                do {
+                    email = generateOneEmail(nameObj.firstName, nameObj.lastName, domain, emailFormat);
+                    attempts++;
+                } while (usedEmails.has(email) && attempts < 100);
+                usedEmails.add(email);
+
+                batchResults.push({
+                    name: nameObj.fullName,
+                    firstName: nameObj.firstName,
+                    lastName: nameObj.lastName,
+                    email: email,
+                    emailPrefix: email.split('@')[0]
+                });
+            }
+
+            renderBatchResults();
+            showToast(`已生成 ${count} 组数据`);
+        }
+
+        function renderBatchResults() {
+            const container = document.getElementById('batchResults');
+            container.innerHTML = '';
+            
+            batchResults.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'batch-item';
+                div.innerHTML = `
+                    <div class="batch-item-content">
+                        <div class="batch-item-name">${index + 1}. ${item.name}</div>
+                        <div class="batch-item-email">${item.email}</div>
+                        <div style="margin-top:6px;display:flex;gap:12px;font-size:0.95em;color:#888;">
+                            <span>名: ${item.firstName}</span>
+                            <span>姓: ${item.lastName}</span>
+                            <span>前缀: ${item.emailPrefix}</span>
+                        </div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:4px;flex-shrink:0;">
+                        <button class="btn btn-copy" style="font-size:0.8em;padding:4px 10px;" onclick="copyBatchField(${index},'firstName', this)">复制名</button>
+                        <button class="btn btn-copy" style="font-size:0.8em;padding:4px 10px;" onclick="copyBatchField(${index},'lastName', this)">复制姓</button>
+                        <button class="btn btn-copy" style="font-size:0.8em;padding:4px 10px;" onclick="copyBatchField(${index},'emailPrefix', this)">复制前缀</button>
+                        <button class="btn btn-copy" style="padding:4px 10px;" onclick="copyBatchItem(${index}, this)">复制全部</button>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+            
+            document.getElementById('batchStats').textContent = `共 ${batchResults.length} 条记录`;
+        }
+
+        function copyBatchItem(index, btn) {
+            const item = batchResults[index];
+            const text = `${item.name}\n${item.email}`;
+            copyText(text, btn);
+        }
+
+        function copyBatchField(index, field, btn) {
+            const item = batchResults[index];
+            copyText(item[field], btn);
+        }
+
+        function copyAllResults() {
+            if (batchResults.length === 0) {
+                showToast('没有可复制的结果');
+                return;
+            }
+
+            const text = batchResults.map(item =>
+                `${item.name}\t${item.email}`
+            ).join('\n');
+
+            copyText(text);
+            showToast(`已复制 ${batchResults.length} 条记录`);
+        }
+
+        function clearBatch() {
+            batchResults = [];
+            document.getElementById('batchResults').innerHTML = '';
+            document.getElementById('batchStats').textContent = '';
+            showToast('已清空结果');
+        }
+
+        var quickGenData = {};
+
+        function quickGenerate() {
+            generateName();
+            generateEmail();
+            generatePassword();
+            var name = lastGeneratedName ? lastGeneratedName.fullName : '';
+            var email = lastGeneratedEmail;
+            var emailPwd = document.getElementById('emailPwdText').textContent;
+            if (emailPwd === '-' || emailPwd === '点击') emailPwd = generateEmailPwd();
+            var applePwd = document.getElementById('pwdResult').textContent;
+            if (applePwd === '点击「生成密码」' || applePwd === '点击生成') applePwd = '';
+            quickGenData = { name: name, email: email, emailPwd: emailPwd, applePwd: applePwd };
+            var text = '姓名: ' + name + '\n邮箱: ' + email + '\n邮箱密码: ' + emailPwd + '\n苹果密码: ' + applePwd;
+            document.getElementById('quickGenResult').textContent = text;
+            showToast('已生成');
+        }
+
+        function quickCopy() {
+            if (!quickGenData.email) { showToast('请先生成'); return; }
+            var text = '姓名: ' + quickGenData.name + '\n邮箱: ' + quickGenData.email + '\n邮箱密码: ' + quickGenData.emailPwd + '\n苹果密码: ' + quickGenData.applePwd;
+            copyText(text);
+            showToast('已复制全部');
+        }
+
+        function quickSave() {
+            if (!quickGenData.email) { showToast('请先生成'); return; }
+            document.getElementById('saveEmail').value = quickGenData.email || '';
+            document.getElementById('saveApplePwd').value = quickGenData.applePwd || '';
+            document.getElementById('saveEmailPwd').value = quickGenData.emailPwd || '';
+            showToast('已填入右侧存档，点击「保存」完成');
+        }
+
+        function copyText(text, btn) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            if (btn) showCopySuccess(btn);
+            else showToast('已复制');
+        }
+
+        function copyToClipboard(elementId, btn) {
+            const text = document.getElementById(elementId).textContent;
+            copyText(text, btn);
+        }
+
+        function copyFirstName(btn) {
+            if (!lastGeneratedName) return;
+            copyText(lastGeneratedName.firstName, btn);
+        }
+
+        function copyLastName(btn) {
+            if (!lastGeneratedName) return;
+            copyText(lastGeneratedName.lastName, btn);
+        }
+
+        function copyEmailLoginUrl(btn) {
+            const link = document.getElementById('emailLoginLink');
+            if (link.textContent) copyText(link.textContent, btn);
+        }
+
+        function copyEmailPrefix(btn) {
+            const email = document.getElementById('emailResult').textContent;
+            const prefix = email.split('@')[0];
+            if (!prefix || prefix === '点击') return;
+            copyText(prefix, btn);
+        }
+
+        let lastTurkishBilling = { street: '-', postcode: '-', city: '-', country: '-' };
+
+        function generatePassword() {
+            const count = parseInt(document.getElementById('pwdCount').value) || 1;
+
+            const words = [
+                'love','star','moon','king','life','time','book','code','gold','hero',
+                'lake','open','rain','safe','tree','cool','dark','fish','game','hill',
+                'rock','sand','tiger','water','fire','world','happy','light','dragon','magic'
+            ];
+
+            function makeOne() {
+                var w = randomChoice(words);
+                var patterns = [
+                    function() { return cap(w) + String(random(100, 999)) + randSym(); },
+                    function() { return cap(w) + randSym() + String(random(10, 99)); }
+                ];
+                return randomChoice(patterns)();
+            }
+
+            function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+            function randSym() { return randomChoice(['!','@','#','$','%','&']); }
+
+            function check(pwd) {
+                if (pwd.length !== 8) return false;
+                if (!/[A-Z]/.test(pwd)) return false;
+                if (!/[a-z]/.test(pwd)) return false;
+                if (!/[0-9]/.test(pwd)) return false;
+                if (!/[!@#$%^&*()_+\-=\[\]{}|;:,.<>?]/.test(pwd)) return false;
+                return true;
+            }
+
+            const used = new Set();
+            const passwords = [];
+
+            for (let i = 0; i < count; i++) {
+                let pwd;
+                let attempts = 0;
+                do {
+                    pwd = makeOne();
+                    attempts++;
+                } while ((used.has(pwd) || !check(pwd)) && attempts < 200);
+                used.add(pwd);
+                passwords.push(pwd);
+            }
+
+            document.getElementById('pwdResult').textContent = passwords.join('\n');
+            if (passwords.length > 0) lastGeneratedPwd = passwords[0];
+
+            const strength = document.getElementById('pwdStrength');
+            const bits = Math.log2(72) * Math.max(...passwords.map(p => p.length));
+            let level, color;
+            if (bits < 40) { level = '弱'; color = '#dc3545'; }
+            else if (bits < 60) { level = '中'; color = '#ffc107'; }
+            else if (bits < 80) { level = '强'; color = '#28a745'; }
+            else { level = '极强'; color = '#667eea'; }
+            strength.innerHTML = `8位以上 · 含大小写+数字+符号 · <span style="font-weight:600;color:${color};">${level}</span>`;
+
+            return passwords;
+        }
+
+        function generateTurkishBilling() {
+            lastTurkishBilling = {
+                street: 'Ataturk Cd',
+                postcode: '34000',
+                city: 'Istanbul',
+                country: 'Turkey'
+            };
+
+            document.getElementById('trStreet').textContent = lastTurkishBilling.street;
+            document.getElementById('trPostcode').textContent = lastTurkishBilling.postcode;
+            document.getElementById('trCity').textContent = lastTurkishBilling.city;
+            document.getElementById('trCountry').textContent = lastTurkishBilling.country;
+            document.getElementById('trFull').textContent =
+                `Street: ${lastTurkishBilling.street}\nPostcode: ${lastTurkishBilling.postcode}\nCity: ${lastTurkishBilling.city}\nCountry: ${lastTurkishBilling.country}`;
+        }
+
+        function copyTurkishField(field, btn) {
+            copyText(lastTurkishBilling[field], btn);
+        }
+
+        function copyTurkishFull(btn) {
+            const text = document.getElementById('trFull').textContent;
+            if (text === '点击生成按钮开始') return;
+            copyText(text, btn);
+        }
+
+        let accounts = [];
+
+        function loadAccounts() {
+            try {
+                const data = localStorage.getItem('savedAccounts');
+                accounts = data ? JSON.parse(data) : [];
+            } catch(e) {
+                accounts = [];
+            }
+            renderAccounts();
+        }
+
+        function saveToLocal() {
+            try {
+                localStorage.setItem('savedAccounts', JSON.stringify(accounts));
+            } catch(e) {}
+        }
+
+        var editingIndex = -1;
+
+        function editAccount(index) {
+            var acc = accounts[index];
+            document.getElementById('saveEmail').value = acc.email || '';
+            document.getElementById('saveApplePwd').value = acc.applePwd || acc.password || '';
+            document.getElementById('saveEmailPwd').value = acc.emailPwd || '';
+            document.getElementById('savePhone').value = acc.phone || '';
+            editingIndex = index;
+            document.getElementById('saveBtn').textContent = '更新账号';
+        }
+
+        function saveAccount() {
+            var email = document.getElementById('saveEmail').value.trim();
+            var applePwd = document.getElementById('saveApplePwd').value.trim();
+            var emailPwd = document.getElementById('saveEmailPwd').value.trim();
+            var phone = document.getElementById('savePhone').value.trim();
+            var regDate = formatDate(new Date());
+
+            if (!email && !applePwd && !emailPwd && !phone) {
+                showToast('请至少填写一项');
+                return;
+            }
+
+            const now = new Date();
+            const expires = new Date(now);
+            expires.setMonth(expires.getMonth() + 1);
+            const timeStr = now.toLocaleString('zh-CN', { hour12: false });
+            if (editingIndex >= 0) {
+                var acc = accounts[editingIndex];
+                acc.email = email;
+                acc.applePwd = applePwd;
+                acc.emailPwd = emailPwd;
+                acc.phone = phone;
+                editingIndex = -1;
+                document.getElementById('saveBtn').textContent = '保存';
+            } else {
+                accounts.unshift({
+                    email: email,
+                    applePwd: applePwd,
+                    emailPwd: emailPwd,
+                    phone: phone,
+                    regDate: regDate,
+                    time: timeStr,
+                    createdAt: formatDate(now),
+                    expiresAt: formatDate(expires)
+                });
+            }
+            saveToLocal();
+            renderAccounts();
+            clearSaveInputs();
+            showToast('账号已保存');
+        }
+
+        function formatDate(date) {
+            const y = date.getFullYear();
+            const m = String(date.getMonth() + 1).padStart(2, '0');
+            const d = String(date.getDate()).padStart(2, '0');
+            return `${y}-${m}-${d}`;
+        }
+
+        function renewAccount(index) {
+            const acc = accounts[index];
+            const now = new Date();
+            const expires = new Date(now);
+            expires.setMonth(expires.getMonth() + 1);
+            acc.createdAt = formatDate(now);
+            acc.expiresAt = formatDate(expires);
+            saveToLocal();
+            renderAccounts();
+            showToast('已续费一个月');
+        }
+
+        function deleteAccount(index) {
+            accounts.splice(index, 1);
+            saveToLocal();
+            renderAccounts();
+            showToast('已删除');
+        }
+
+        function clearAllAccounts() {
+            if (accounts.length === 0) return;
+            if (confirm('确定清空所有已保存的账号？')) {
+                accounts = [];
+                saveToLocal();
+                renderAccounts();
+                showToast('已清空全部');
+            }
+        }
+
+        function clearSaveInputs() {
+            document.getElementById('saveEmail').value = '';
+            document.getElementById('saveApplePwd').value = '';
+            document.getElementById('saveEmailPwd').value = '';
+            document.getElementById('savePhone').value = '';
+            editingIndex = -1;
+            document.getElementById('saveBtn').textContent = '保存';
+        }
+
+        function renderAccounts() {
+            const list = document.getElementById('accountList');
+            const count = document.getElementById('accountCount');
+            const clearBtn = document.getElementById('clearAllBtn');
+
+            count.textContent = accounts.length;
+            clearBtn.style.display = accounts.length > 0 ? '' : 'none';
+
+            if (accounts.length === 0) {
+                list.innerHTML = '<div style="text-align:center;color:#aaa;padding:30px 0;">暂无保存的账号</div>';
+                return;
+            }
+
+            list.innerHTML = '';
+            accounts.forEach((acc, i) => {
+                const now = new Date();
+                const expireDate = new Date(acc.expiresAt);
+                const isExpired = now > expireDate;
+                const statusClass = isExpired ? 'color:#999;' : 'color:#28a745;font-weight:600;';
+                const statusText = isExpired ? '已过期' : '有效';
+                const card = document.createElement('div');
+                card.className = 'account-card';
+                const applePwd = acc.applePwd || acc.password || '-';
+                const emailPwd = acc.emailPwd || '-';
+                card.innerHTML = '<div class="account-card">' +
+                    '<div class="account-card-header">' +
+                        '<span style="font-weight:600;color:#333;font-size:0.88em;word-break:break-all;">' + (acc.email || '无邮箱') + '</span>' +
+                        '<div style="display:flex;gap:4px;align-items:center;flex-shrink:0;">' +
+                            '<button style="background:none;border:none;cursor:pointer;font-size:0.75em;color:#28a745;padding:2px;" onclick="copyAccountField(' + i + ',\'email\',this)" title="复制邮箱">📋</button>' +
+                            '<span style="font-size:0.72em;padding:2px 8px;border-radius:4px;background:' + (isExpired?'#eee':'#e8f5e9') + ';color:' + (isExpired?'#999':'#28a745') + ';">' + statusText + '</span>' +
+                            '<button style="background:none;border:none;cursor:pointer;font-size:0.8em;color:#aaa;padding:2px;" onclick="deleteAccount(' + i + ')" title="删除">✕</button>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="account-card-info">' +
+                        '<span><span class="label">苹果密码</span> ' + applePwd + ' <button style="background:none;border:none;cursor:pointer;font-size:0.75em;color:#28a745;padding:0;" onclick="copyAccountField(' + i + ',\'applePwd\',this)" title="复制">📋</button></span>' +
+                        '<span><span class="label">邮箱密码</span> ' + emailPwd + ' <button style="background:none;border:none;cursor:pointer;font-size:0.75em;color:#28a745;padding:0;" onclick="copyAccountField(' + i + ',\'emailPwd\',this)" title="复制">📋</button></span>' +
+                        '<span><span class="label">手机</span> ' + (acc.phone || '-') + ' <button style="background:none;border:none;cursor:pointer;font-size:0.75em;color:#28a745;padding:0;" onclick="copyAccountField(' + i + ',\'phone\',this)" title="复制">📋</button></span>' +
+                        '<span><span class="label">充值</span> ' + (acc.createdAt || acc.time) + '</span>' +
+                        '<span><span class="label">到期</span> ' + (acc.expiresAt || '-') + '</span>' +
+                    '</div>' +
+                    '<div class="account-card-actions" style="margin-top:6px;padding-top:6px;border-top:1px solid #f0f0f0;">' +
+                        '<button style="background:#ffc107;color:#333;" onclick="editAccount(' + i + ')">编辑</button>' +
+                        '<button style="background:#ffc107;color:#333;" onclick="renewAccount(' + i + ')">续费</button>' +
+                    '</div>' +
+                '</div>';
+                list.appendChild(card);
+            });
+        }
+
+        function copyAccountField(index, field, btn) {
+            let text = accounts[index][field];
+            if (!text && field === 'applePwd') text = accounts[index].password;
+            if (!text) {
+                showToast('该项为空');
+                return;
+            }
+            copyText(text, btn);
+        }
+
+        function showCopySuccess(btn) {
+            const originalText = btn.textContent;
+            btn.textContent = '已复制';
+            btn.classList.add('copied');
+            
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.classList.remove('copied');
+            }, 1500);
+        }
+
+        function toggleStep(header) {
+            const body = header.nextElementSibling;
+            const arrow = header.querySelector('.step-arrow');
+            const isOpen = body.classList.contains('open');
+            document.querySelectorAll('.step-body.open').forEach(el => {
+                el.classList.remove('open');
+                el.previousElementSibling.querySelector('.step-arrow').classList.remove('open');
+            });
+            if (!isOpen) {
+                body.classList.add('open');
+                arrow.classList.add('open');
+            }
+        }
+
+        function exportAccounts() {
+            if (accounts.length === 0) {
+                showToast('没有账号可导出');
+                return;
+            }
+            let text = '===== GPT土区注册 账号导出 =====\n\n';
+            accounts.forEach((acc, i) => {
+                const applePwd = acc.applePwd || acc.password || '';
+                text += `账号 ${i + 1}（${acc.createdAt || acc.time} ~ ${acc.expiresAt || ''}）\n`;
+                text += `邮箱：${acc.email || ''}\n`;
+                if (applePwd) text += `苹果密码：${applePwd}\n`;
+                if (acc.emailPwd) text += `邮箱密码：${acc.emailPwd}\n`;
+                if (acc.phone) text += `手机：${acc.phone}\n`;
+                text += '\n';
+            });
+            const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = `GPT土区账号_${formatDate(new Date())}.txt`;
+            a.click();
+            URL.revokeObjectURL(a.href);
+            showToast(`已导出 ${accounts.length} 个账号`);
+        }
+
+        function switchRightTab(index) {
+            document.querySelectorAll('.right-tab').forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
+            document.querySelectorAll('.right-panel').forEach((panel, i) => {
+                panel.classList.toggle('active', i === index);
+            });
+            if (index === 2) generateTurkishBilling();
+            if (index === 3) generatePassword();
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        document.getElementById('useNameForEmail').addEventListener('change', function() {
+            if (this.checked && !lastGeneratedName) {
+                generateName();
+            }
+        });
+
+        generateName();
+        generateEmail();
+        loadAccounts();
+    </script>
+</body>
+</html>
